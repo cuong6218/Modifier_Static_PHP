@@ -1,21 +1,27 @@
 <?php
     class User{
+        private $id;
         private $subname;
         private $name;
         private $birth;
         private $address;
         private $job;
 
-
-        public function __construct($subname, $name, $birth, $address, $job)
+        public function __construct($id, $subname, $name, $birth, $address, $job)
         {
+            $this->id = $id;
             $this->subname = $subname;
             $this->name = $name;
             $this->birth = $birth;
             $this->address = $address;
             $this->job = $job;
         }
-
+        public function setId($id){
+            $this->id = $id;
+        }
+        public function getId(){
+            return $this->id;
+        }
 
         public function setSubName($subname){
             $this->subname = $subname;
@@ -55,6 +61,5 @@
         public function getJob(){
             return $this->job;
         }
-
 
     }
